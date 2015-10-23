@@ -4,7 +4,7 @@ export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=2
 baseDirectory=./
 dataDirectory="${baseDirectory}/Data/"
 outputDirectory="${baseDirectory}/Output/"
-outputPrefix=${outputDirectory}/N25IxE
+outputPrefix="${outputDirectory}/N25IxE"
 
 mkdir -p $outputDirectory
 
@@ -41,7 +41,7 @@ DenoiseImage -d 3 -v 1 -i $expirationPreprocessed -o $expirationPreprocessed
 ##############
 #
 # Perform registration
-#  * we don't perform any linear registration.  There really isnt' a linear
+#  * we don't perform any linear registration.  There really isn't a linear
 #    transform between inspiratory and expiratory scans since the global
 #    position of the body basically remains the same.  In the case below,
 #    we use a coarse B-spline registration on the the downsampled image
