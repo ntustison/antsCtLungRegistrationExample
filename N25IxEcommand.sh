@@ -4,7 +4,7 @@ export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=2
 baseDirectory=./
 dataDirectory="${baseDirectory}/Data/"
 outputDirectory="${baseDirectory}/Output/"
-outputPrefix=${outputDirectory}/
+outputPrefix=${outputDirectory}/N25IxE
 
 mkdir -p $outputDirectory
 
@@ -56,5 +56,5 @@ antsRegistration -d 3 \
                  -c 200x200x100x100x50 \
                  -f 8x6x4x2x1 \
                  -s 2x1x0x0x0 \
-                 -o [/Users/ntustison/Data/Eduardo/Registrations/N25//N25IxE,/Users/ntustison/Data/Eduardo/Registrations/N25//N25IxEWarped.nii.gz]
+                 -o [${outputPrefix},${outputPrefix}Warped.nii.gz,${outputPrefix}InverseWarped.nii.gz]
 
