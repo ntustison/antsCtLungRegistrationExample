@@ -41,12 +41,13 @@ DenoiseImage -d 3 -v 1 -i $expirationPreprocessed -o $expirationPreprocessed
 ##############
 #
 # Perform registration
-#  * we don't perform any linear registration prior.  perhaps we should do
-#    affine.  In the case below, we use a coarse B-spline registration on the
-#    the downsampled image which should account for those large inspiration/
-#    expiration differences.
+#  * we don't perform any linear registration.  There really isnt' a linear
+#    transform between inspiratory and expiratory scans since the global
+#    position of the body basically remains the same.  In the case below,
+#    we use a coarse B-spline registration on the the downsampled image
+#    which should account for those large inspiration/expiration differences.
 #  * the meaning of each option is given in the antsRegistration help
-#    i.e., 'antsRegistration -h 1'
+#    i.e., 'antsRegistration --help 1'
 #
 
 antsRegistration -d 3 \
